@@ -1,9 +1,11 @@
 package com.alizhezi.component.navigation
 
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
+import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment.findNavController
@@ -39,6 +41,12 @@ class HomeFragment : Fragment() {
         }
 
 
+        view.doOnPreDraw {
+
+
+        }
+
+
         //TODO STEP 6 - Set NavOptions
 //        val options = NavOptions {
 //            anim {
@@ -55,7 +63,7 @@ class HomeFragment : Fragment() {
             .setPopEnterAnim(R.anim.slide_in_left)
             .setPopExitAnim(R.anim.slide_out_right)
             .build()
-        view.findViewById<Button>(R.id.navigate_destination_button)?.setOnClickListener {
+        view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener {
             findNavController(this).navigate(R.id.flow_step_one_dest, null, options)
         }
     }
