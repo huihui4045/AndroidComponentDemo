@@ -24,8 +24,19 @@ class FlowStepFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_flow_step, container, false)
+        setHasOptionsMenu(true)
+
+        val flowStepNumber = arguments?.getInt("flowStepNumber")
+
+        // TODO STEP 8 - Use type-safe arguments - remove previous line!
+//        val safeArgs: FlowStepFragmentArgs by navArgs()
+//        val flowStepNumber = safeArgs.flowStepNumber
+        // TODO END STEP 8
+
+        return when (flowStepNumber) {
+            2 -> inflater.inflate(R.layout.flow_step_two_fragment, container, false)
+            else -> inflater.inflate(R.layout.fragment_flow_step, container, false)
+        }
     }
 
 

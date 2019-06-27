@@ -15,7 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     open fun initData() {
-        title = intent.getStringExtra("title")
+        title = intent.getStringExtra("title")?:""
 
 
     }
