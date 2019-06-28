@@ -8,9 +8,11 @@ import android.widget.Button
 import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment.findNavController
 
 import com.alizhezi.component.R
+import com.alizhezi.component.base.BaseFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +49,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        //TODO STEP 6 - Set NavOptions
+//        //TODO STEP 6 - Set NavOptions
 //        val options = NavOptions {
 //            anim {
 //                enter = R.anim.slide_in_right
@@ -66,6 +68,11 @@ class HomeFragment : Fragment() {
         view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener {
             findNavController(this).navigate(R.id.flow_step_one_dest, null, options)
         }
+
+
+//                view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener(
+//                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+//        )
     }
 
 

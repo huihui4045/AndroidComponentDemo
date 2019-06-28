@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 
 import com.alizhezi.component.R
+import com.alizhezi.component.base.BaseFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class FlowStepFragment : Fragment() {
+class FlowStepFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +39,18 @@ class FlowStepFragment : Fragment() {
             2 -> inflater.inflate(R.layout.flow_step_two_fragment, container, false)
             else -> inflater.inflate(R.layout.fragment_flow_step, container, false)
         }
+
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        view.findViewById<View>(R.id.next_button).setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.next_action)
+        )
     }
 
 

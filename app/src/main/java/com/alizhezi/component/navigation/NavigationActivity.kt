@@ -2,15 +2,14 @@ package com.alizhezi.component.navigation
 
 import android.content.res.Resources
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import com.alizhezi.component.BaseActivity
+import com.alizhezi.component.base.BaseActivity
 import com.alizhezi.component.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_navigation.*
 
 class NavigationActivity : BaseActivity() {
@@ -27,6 +26,7 @@ class NavigationActivity : BaseActivity() {
 
     override fun initView() {
         setSupportActionBar(toolbar)
+        toolbar.visibility= View.GONE
 
         var host = my_nav_host_fragment as NavHostFragment
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.alizhezi.component.base.BaseActivity
 import com.alizhezi.component.navigation.NavigationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

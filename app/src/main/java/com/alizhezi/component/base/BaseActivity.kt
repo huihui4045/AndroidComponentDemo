@@ -1,4 +1,4 @@
-package com.alizhezi.component
+package com.alizhezi.component.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
