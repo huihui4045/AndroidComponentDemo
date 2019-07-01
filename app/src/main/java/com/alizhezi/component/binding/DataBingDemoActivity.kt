@@ -3,6 +3,7 @@ package com.alizhezi.component.binding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -25,7 +26,7 @@ class DataBingDemoActivity : AppCompatActivity() {
             DataBindingUtil.setContentView<ActivityDataBingDemoBinding>(this, R.layout.activity_data_bing_demo)
 
 
-        dataBinding.user = UserInfo("lv", 20)
+        dataBinding.user = UserInfo(ObservableField("lv"), ObservableField(12))
 
 
         var layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)

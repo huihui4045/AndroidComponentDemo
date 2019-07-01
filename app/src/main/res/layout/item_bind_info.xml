@@ -33,7 +33,7 @@
         <ImageView android:layout_width="80dp"
                    android:id="@+id/iv_head2"
                    android:scaleType="centerCrop"
-                   android:src="@{persion.headUrl2}"
+                   app:imageUrl="@{persion.headUrl2}"
                    android:layout_height="80dp"/>
 
 
