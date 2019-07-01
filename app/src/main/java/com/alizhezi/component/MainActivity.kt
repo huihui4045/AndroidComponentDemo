@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alizhezi.component.base.BaseActivity
+import com.alizhezi.component.binding.DataBingDemoActivity
 import com.alizhezi.component.navigation.NavigationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -54,6 +55,7 @@ class MainActivity : BaseActivity() {
 
 
         datas.add(ItemInfo("Navigation 用法", NavigationActivity::class.java))
+        datas.add(ItemInfo("DataBing入门用法", DataBingDemoActivity::class.java))
 
 
         return datas
